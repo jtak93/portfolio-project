@@ -21,5 +21,18 @@ function openTab(evt, cityName) {
     document.getElementById(cityName).style.display = "block";
     evt.currentTarget.className += " active";
 }
+// type writer
 
-openCity();
+var i = 0;
+var header = 'Skills'; /* The text */
+var speed = 100; /* The speed/duration of the effect in milliseconds */
+
+function typeText(id, text) {
+    if (i < text.length) {
+        document.getElementById(id).innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeText.bind(null, id, text), speed);
+    }
+}
+
+typeText("skills", header)

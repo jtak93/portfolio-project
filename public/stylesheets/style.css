@@ -1,14 +1,18 @@
-html {
-  background: #0F2027;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
 body {
+  padding:0;
+  height:100%;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: #BBD2C5;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #536976, #BBD2C5);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #536976, #BBD2C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 a {
   color:black
+}
+.txt-main {
+  color: white;
 }
 
 .center {
@@ -35,7 +39,8 @@ a {
 .tab {
     overflow: hidden;
     border: 1px solid #ccc;
-    background-color: #f1f1f1;
+    border-radius: 5px;
+    background-color: #a6f4e5;
 }
 
 /* Style the buttons that are used to open the tab content */
@@ -47,16 +52,19 @@ a {
     cursor: pointer;
     padding: 14px 16px;
     transition: 0.3s;
+    width: 33.333%;
 }
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-    background-color: #ddd;
+    background-color: rgb(0, 121, 196);
+    color: white;
 }
 
 /* Create an active/current tablink class */
 .tab button.active {
-    background-color: #ccc;
+    background-color: rgb(12, 0, 63);
+    color:white
 }
 
 /* Style the tab content */
@@ -64,9 +72,62 @@ a {
     display: none;
     padding: 6px 12px;
     border: 1px solid #ccc;
-    border-top: none;
+    border-radius: 5px;
+    margin-top: 5px;
+    min-height: 400px;
 }
 .half {
     min-width: 400px;
     width: 60%;
+}
+
+.h-300 {
+  height: 300px;
+}
+
+.bot-0 {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+/* Typewrite effect */
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid white; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 33% }
+  to { width: 66% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: white }
+}
+
+/* Stroke outline text */
+.stroke {
+  color: #fff;
+  text-shadow:
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000; 
+}
+
+.main-header {
+  min-height: 130px;
+}
+
+.sub-header {
+  min-height: 70px;
 }
